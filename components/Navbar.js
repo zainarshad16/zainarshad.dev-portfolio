@@ -27,7 +27,7 @@ const Navbar = () => {
                 </ul>
 
                 <div onClick={() => setIsOpen(!isOpen)} className="hamburger sm:hidden cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34" color="#787878" fill="none">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34" color="#888888" fill="none">
                         <path d="M4 5L16 5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
                         <path d="M4 12L20 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
                         <path d="M4 19L12 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
