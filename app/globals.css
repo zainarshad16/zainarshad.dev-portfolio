@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* ==== Custom Dark Scrollbar ==== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f0f0f; /* dark background */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #191717, #191717); 
+  border-radius: 9999px;
+  border: 2px solid #0f0f0f; /* creates spacing look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1c1c1c, #1c1c1c);
+}
+
+.blue-line {
+  width: 0%;
+  animation: expandLine 1.5s ease-out forwards;
+}
+
+.blue-line1 {
+  width: 0%;
+  animation: expandLine1 1.5s ease-out forwards;
+}
+.blue-line2 {
+  width: 0%;
+  animation: expandLine2 1.5s ease-out forwards;
+}
+.blue-line3 {
+  width: 0%;
+  animation: expandLine3 1.5s ease-out forwards;
+}
+.blue-line4 {
+  width: 0%;
+  animation: expandLine4 1.5s ease-out forwards;
+}
+
+@keyframes expandLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 75%; /* change this to whatever % you want */
+  }
+}
+
+@keyframes expandLine1 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%; /* change this to whatever % you want */
+  }
+}
+@keyframes expandLine2 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 95%; /* change this to whatever % you want */
+  }
+}
+@keyframes expandLine3 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%; /* change this to whatever % you want */
+  }
+}
+@keyframes expandLine4 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 40%; /* change this to whatever % you want */
+  }
+}
+
+/* Black background + white text */
+.Toastify__toast {
+  background: #000 !important;
+  color: white !important;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Purple-950 sliding line */
+.Toastify__toast::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  background: #3b1582; /* purple-950 */
+  width: 0%;
+  animation: slideLine 1.5s forwards;
+}
+
+@keyframes slideLine {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
