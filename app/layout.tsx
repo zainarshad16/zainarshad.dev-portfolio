@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "zainarshad.dev",
-  description: "This is my portfolio website. Here you can find my projects and my learning experience.",
+  description: "Welcome to the personal portfolio of Zain Arshad, a passionate Full-Stack Developer and IT enthusiast. Explore my journey in BSCS at GCU, my love for cloud computing, coding, SQA, and IT support, and see how I bring creativity and precision to every project I build.",
   icons: { icon: "/favicon.ico" }
 };
 
