@@ -30,7 +30,7 @@ export default function Home() {
           >
             {<div className="info flex flex-col justify-center items-center mt-3 text-center">
               <span className="md:text-6xl text-4xl font-bold">Hi, I'm Zain Arshad</span>
-              <span className="md:text-4xl text-2xl font-bold text-gray-300 flex flex-col md:gap-13 gap-8">I am a Full Stack Developer Intern contributing to impactful and modern web applications.
+              <span className="md:text-4xl text-2xl font-bold text-gray-300 flex flex-col md:gap-13 gap-8">I am a Full Stack Developer contributing to impactful and modern web applications.
                 <span className="text-lg font-normal">With expertise in MERN Stack, Reactjs and NEXTjs, I focus on delivering scalable and efficient products.</span>
               </span>
             </div>}
