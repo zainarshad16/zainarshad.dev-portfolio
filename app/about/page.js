@@ -1,11 +1,5 @@
 import React from 'react'
 
-export const metadata = {
-  title: "About Me - Zain Portfolio",
-  description: "Learn more about Zain Arshad, his journey in BSCS at GCU, skills, cloud computing, SQA, and IT support.",
-  icons: { icon: "/favicon.ico" }
-};
-
 const about = () => {
   return (
     <>
