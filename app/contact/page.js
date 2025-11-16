@@ -6,11 +6,6 @@ import { CgMail } from "react-icons/cg";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
-export const metadata = {
-  title: "Contact Me - Zainarshad Portfolio",
-  description: "Get in touch with Zain Arshad via the contact form. Send messages directly through the portfolio website.",
-  icons: { icon: "/favicon.ico" }
-};
 
 const contact = () => {
 
