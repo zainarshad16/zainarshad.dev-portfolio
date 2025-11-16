@@ -78,7 +78,7 @@ const about = () => {
             problem-solving.
           </p>
 
-          <h2 className="text-2xl text-blue-400 font-semibold mt-10">My Passion for Cloud Computing, SQA & IT Support</h2>
+          <h2 className="text-2xl font-semibold mt-10">My Passion for Cloud Computing, SQA & IT Support</h2>
 
           <p>
             Over time, I’ve developed a strong interest in <b>cloud computing</b>—especially how modern applications scale, deploy,
