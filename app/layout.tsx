@@ -20,6 +20,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "zainarshad.dev",
   description: "This is my portfolio website. Here you can find my projects and my learning experience.",
+  icons: { icon: "/favicon.ico" }
 };
 
 export default function RootLayout({
