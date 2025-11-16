@@ -3,6 +3,12 @@ import { HiChip } from 'react-icons/hi'
 import { IoCodeSlashSharp } from "react-icons/io5";
 import { FaBoxesStacked } from "react-icons/fa6";
 
+export const metadata = {
+  title: "Skills - Zainarshad Portfolio",
+  description: "Explore Zain Arshad’s technical skills in web development, cloud computing, SQA, IT support, and full-stack technologies.",
+  icons: { icon: "/favicon.ico" }
+};
+
 const skills = () => {
   return (
     <>
