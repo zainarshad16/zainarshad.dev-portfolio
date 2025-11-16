@@ -33,12 +33,12 @@ const skills = () => {
         <div className="card p-3 bg-gray-800 rounded-lg">
           <div className="skill my-2 font-bold">MERN</div>
           <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
-            <div className="blue-line h-1.5 bg-blue-500 w-0"></div>
+            <div className="blue-line1 h-1.5 bg-blue-500 w-0"></div>
           </div>
 
           <div className="bottom flex justify-between text-gray-400">
             <span className="text-sm">Proficiency</span>
-            <span className="text-sm">Intermediate</span>
+            <span className="text-sm">Advance</span>
           </div>
         </div>
         <div className="card p-3 bg-gray-800 rounded-lg">
@@ -53,18 +53,18 @@ const skills = () => {
           </div>
         </div>
         <div className="card p-3 bg-gray-800 rounded-lg">
-          <div className="skill my-2 font-bold">NEXT</div>
+          <div className="skill my-2 font-bold">DSA</div>
           <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
-            <div className="blue-line2 h-1.5 bg-blue-500 w-0"></div>
+            <div className="blue-line h-1.5 bg-blue-500 w-0"></div>
           </div>
 
           <div className="bottom flex justify-between text-gray-400">
             <span className="text-sm">Proficiency</span>
-            <span className="text-sm">Expert</span>
+            <span className="text-sm">Intermediate</span>
           </div>
         </div>
         <div className="card p-3 bg-gray-800 rounded-lg">
-          <div className="skill my-2 font-bold">.NET CORE</div>
+          <div className="skill my-2 font-bold">OOP</div>
           <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
             <div className="blue-line3 h-1.5 bg-blue-500 w-0"></div>
           </div>
@@ -75,14 +75,14 @@ const skills = () => {
           </div>
         </div>
         <div className="card p-3 bg-gray-800 rounded-lg">
-          <div className="skill my-2 font-bold">Block-chain</div>
+          <div className="skill my-2 font-bold">My-SQL</div>
           <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
-            <div className="blue-line4 h-1.5 bg-blue-500 w-0"></div>
+            <div className="blue-line h-1.5 bg-blue-500 w-0"></div>
           </div>
 
           <div className="bottom flex justify-between text-gray-400">
             <span className="text-sm">Proficiency</span>
-            <span className="text-sm">Beginer</span>
+            <span className="text-sm">Intermediate</span>
           </div>
         </div>
         
