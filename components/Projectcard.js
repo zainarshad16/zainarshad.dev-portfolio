@@ -1,163 +1,164 @@
-"use client"
-import React from 'react'
-import Link from 'next/link'
+"use client";
+import React, { useEffect, useState } from "react";
+import Link from "next/link";
+import { FaGithub, FaStar, FaCodeBranch, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-const projectcard = () => {
-    return (
-        <>
-            <div className="card m-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-                <Link href={"https://github.com/zainarshad16/Password-Manager-App"} target='_blank'>
-                    <div className="bg-gray-900 flex flex-col  border hover:border-gray-400 border-gray-600  text-white p-5 rounded-lg hover:bg-gray-950 transition-all duration-300 relative w-full h-full">
-                        <img className='invert absolute top-6 right-5' src="link.svg" alt="link" />
-                        <div className="flex items-center mb-2 gap-2">
-                            <img className='rounded-full' width={23} src="guthub.png" alt="" />
-                            <h1 className="text-lg font-bold">Password-Manager-App</h1>
-                        </div>
-                        <p className="mb-4 text-sm text-gray-300">PassOp is a secure password manager web app built with Vite, React, and Tailwind CSS, with a MongoDB backend to safely store and manage user credentials.</p>
-                        <div className='flex items-center gap-4 mb-1'>
-                            <div className='flex items-center gap-1'>
-                                <div className="dot h-3 w-3 bg-yellow-200 rounded-full">
-                                </div>
-                                <span> JavaScript</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="star.svg" alt="star" />
-                                <span>0</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="branch.svg" alt="star" />
-                                <span>1</span>
-                            </div>
-                        </div>
-                        <div className="update text-sm text-gray-500">
-                            Updated a month ago
-                        </div>
-                    </div>
-                </Link>
+const LANG_COLORS = {
+  JavaScript: "#f7df1e",
+  TypeScript: "#3178c6",
+  HTML: "#e34c26",
+  CSS: "#264de4",
+  Python: "#3572A5",
+  "C#": "#178600",
+};
 
-                <Link href={"https://github.com/zainarshad16/Spotify-Frontend-Clone"} target='_blank'>
-                    <div className="bg-gray-900 border-gray-600  flex flex-col border hover:border-gray-400 text-white p-5 rounded-lg hover:bg-gray-950 transition-all duration-300 relative w-full h-full">
-                        <img className='invert absolute top-6 right-5' src="link.svg" alt="link" />
-                        <div className="flex items-center mb-2 gap-2">
-                            <img className='rounded-full' width={23} src="guthub.png" alt="" />
-                            <h1 className="text-lg font-bold">Spotify-Frontend-Clone</h1>
-                        </div>
-                        <p className="mb-9 text-sm text-gray-300">A frontend clone of UltraEdit website. It is my first static website clone without JS but fully responsive.</p>
-                        <div className='flex items-center gap-4 mb-1'>
-                            <div className='flex items-center gap-1'>
-                                <div className="dot h-3 w-3 bg-yellow-200 rounded-full">
-                                </div>
-                                <span> JavaScript</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="star.svg" alt="star" />
-                                <span>0</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="branch.svg" alt="star" />
-                                <span>1</span>
-                            </div>
-                        </div>
-                        <div className="update text-sm text-gray-500">
-                            Updated a month ago
-                        </div>
-                    </div>
-                </Link>
-
-                <Link href={"https://github.com/zainarshad16/iTask-Your-Task-Manager--TodoList-App--React-Project-"} target='_blank'>
-                    <div className="bg-gray-900 border-gray-600 border hover:border-gray-400 flex flex-col text-white p-5 rounded-lg hover:bg-gray-950 transition-all duration-300 relative w-full h-full">
-                        <img className='invert absolute top-6 right-5' src="link.svg" alt="link" />
-                        <div className="flex items-center mb-2 gap-2">
-                            <img className='rounded-full' width={23} src="guthub.png" alt="" />
-                            <h1 className="text-lg font-bold">iTask-TodoList App</h1>
-                        </div>
-                        <p className="mb-3 text-sm text-gray-300">A modern and responsive To-Do App built with Vite and React that lets users add, edit, and manage daily tasks efficiently.</p>
-                        <div className='flex items-center gap-4 mb-1'>
-                            <div className='flex items-center gap-1'>
-                                <div className="dot h-3 w-3 bg-yellow-200 rounded-full">
-                                </div>
-                                <span> JavaScript</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="star.svg" alt="star" />
-                                <span>0</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="branch.svg" alt="star" />
-                                <span>1</span>
-                            </div>
-                        </div>
-                        <div className="update text-sm text-gray-500">
-                            Updated a month ago
-                        </div>
-                    </div>
-                </Link>
-
-                <Link href={"https://github.com/zainarshad16/X.com-twitter-Frontend-Clone--Tailwind-CSS-Project-"} target='_blank'>
-
-                    <div className="bg-gray-900 border-gray-600  border hover:border-gray-400 flex flex-col text-white p-5 rounded-lghover:bg-gray-950 transition-all duration-300 relative w-full h-full">
-                        <img className='invert absolute top-6 right-5' src="link.svg" alt="link" />
-                        <div className="flex items-center mb-2 gap-2">
-                            <img className='rounded-full' width={23} src="guthub.png" alt="" />
-                            <h1 className="text-lg font-bold">X.com Frontend-Clone</h1>
-                        </div>
-                        <p className="mb-4 text-sm text-gray-300">A frontend clone of X.com (Twitter). It is a static frontend including HTML, Tailwind CSS without JS, along with fully responsive.</p>
-                        <div className='flex items-center gap-4 mb-1'>
-                            <div className='flex items-center gap-1'>
-                                <div className="dot h-3 w-3 bg-red-500 rounded-full">
-                                </div>
-                                <span> HTML</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="star.svg" alt="star" />
-                                <span>0</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="branch.svg" alt="star" />
-                                <span>1</span>
-                            </div>
-                        </div>
-                        <div className="update text-sm text-gray-500">
-                            Updated a month ago
-                        </div>
-                    </div>
-                </Link>
-
-                <Link href={"https://github.com/zainarshad16/Netflix-Frontend-Clone"} target='_blank'>
-                    <div className="bg-gray-900 border-gray-600 border hover:border-gray-400 flex flex-col text-white p-5 rounded-lg hover:bg-gray-950 transition-all duration-300 relative w-full h-full">
-                        <img className='invert absolute top-6 right-5' src="link.svg" alt="link" />
-                        <div className="flex items-center mb-2 gap-2">
-                            <img className='rounded-full' width={23} src="guthub.png" alt="" />
-                            <h1 className="text-lg font-bold">Netflix-Frontend-Clone</h1>
-                        </div>
-                        <p className="mb-8 text-sm text-gray-300">It is a Netflix clone. The website only contains static frontend without JS but is fully responsive.</p>
-                        <div className='flex items-center gap-4 mb-1'>
-                            <div className='flex items-center gap-1'>
-                                <div className="dot h-3 w-3 bg-red-500 rounded-full">
-                                </div>
-                                <span> HTML</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="star.svg" alt="star" />
-                                <span>0</span>
-                            </div>
-                            <div className='flex items-center gap-1'>
-                                <img className='invert' src="branch.svg" alt="star" />
-                                <span>0</span>
-                            </div>
-                        </div>
-                        <div className="update text-sm text-gray-500">
-                            Updated a month ago
-                        </div>
-                    </div>
-                </Link>
-
-
-            </div>
-
-
-        </>
-    )
+function timeAgo(dateStr) {
+  const now = Date.now();
+  const then = new Date(dateStr).getTime();
+  const diff = Math.floor((now - then) / 1000);
+  if (diff < 60) return "just now";
+  if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+  if (diff < 2592000) return `${Math.floor(diff / 86400)}d ago`;
+  if (diff < 31536000) return `${Math.floor(diff / 2592000)}mo ago`;
+  return `${Math.floor(diff / 31536000)}y ago`;
 }
 
-export default projectcard
+/* Skeleton loader card */
+const SkeletonCard = () => (
+  <div className="bg-[#0d0d18] border border-white/[0.06] rounded-2xl p-5 flex flex-col gap-4">
+    <div className="flex items-center gap-2">
+      <div className="skeleton w-5 h-5 rounded-full" />
+      <div className="skeleton h-4 w-40 rounded" />
+    </div>
+    <div className="skeleton h-3 w-full rounded" />
+    <div className="skeleton h-3 w-3/4 rounded" />
+    <div className="flex gap-3 mt-auto">
+      <div className="skeleton h-3 w-16 rounded" />
+      <div className="skeleton h-3 w-12 rounded" />
+    </div>
+  </div>
+);
+
+const Projectcard = () => {
+  const [repos, setRepos] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetch("/api/github")
+      .then((r) => {
+        if (!r.ok) throw new Error("fetch failed");
+        return r.json();
+      })
+      .then((data) => {
+        if (Array.isArray(data)) setRepos(data);
+        else throw new Error("bad data");
+      })
+      .catch(() => setError(true))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <SkeletonCard key={i} />
+        ))}
+      </div>
+    );
+  }
+
+  if (error || repos.length === 0) {
+    return (
+      <div className="text-center py-16 text-gray-500">
+        <FaGithub className="w-10 h-10 mx-auto mb-3 opacity-30" />
+        <p>Could not load repositories. Check GitHub for the latest projects.</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      {repos.map((repo, i) => {
+        const langColor = LANG_COLORS[repo.language] ?? "#8b949e";
+        return (
+          <motion.div
+            key={repo.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.5, delay: i * 0.08 }}
+          >
+            <Link
+              href={repo.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block h-full"
+              id={`project-card-${repo.id}`}
+            >
+              <div className="bg-[#0d0d18] border border-white/[0.06] group-hover:border-purple-700/40 rounded-2xl p-5 flex flex-col gap-3 h-full transition-all duration-300 group-hover:bg-white/[0.03] group-hover:-translate-y-1 group-hover:shadow-xl group-hover:shadow-purple-900/20 relative overflow-hidden">
+                {/* Top-right link icon */}
+                <FaExternalLinkAlt className="absolute top-4 right-4 w-3.5 h-3.5 text-gray-600 group-hover:text-purple-400 transition-colors duration-200" />
+
+                {/* Repo name */}
+                <div className="flex items-center gap-2 pr-5">
+                  <FaGithub className="w-4 h-4 text-gray-500 flex-shrink-0 group-hover:text-purple-400 transition-colors" />
+                  <h3 className="font-bold text-white text-sm leading-snug group-hover:text-purple-300 transition-colors line-clamp-1">
+                    {repo.name}
+                  </h3>
+                </div>
+
+                {/* Description */}
+                <p className="text-xs text-gray-400 leading-relaxed line-clamp-2 flex-1">
+                  {repo.description ?? "No description available."}
+                </p>
+
+                {/* Topics */}
+                {repo.topics && repo.topics.length > 0 && (
+                  <div className="flex flex-wrap gap-1.5">
+                    {repo.topics.slice(0, 3).map((t) => (
+                      <span
+                        key={t}
+                        className="px-2 py-0.5 rounded-full text-[10px] font-medium bg-purple-900/20 border border-purple-800/30 text-purple-400"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
+
+                {/* Footer stats */}
+                <div className="flex items-center gap-4 text-xs text-gray-500 pt-1 border-t border-white/[0.04]">
+                  {repo.language && (
+                    <span className="flex items-center gap-1.5">
+                      <span
+                        className="w-2.5 h-2.5 rounded-full flex-shrink-0"
+                        style={{ backgroundColor: langColor }}
+                      />
+                      {repo.language}
+                    </span>
+                  )}
+                  <span className="flex items-center gap-1">
+                    <FaStar className="w-3 h-3" />
+                    {repo.stars}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <FaCodeBranch className="w-3 h-3" />
+                    {repo.forks}
+                  </span>
+                  <span className="ml-auto text-[10px]">
+                    Updated {timeAgo(repo.pushedAt)}
+                  </span>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Projectcard;

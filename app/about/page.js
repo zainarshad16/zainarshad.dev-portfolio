@@ -1,178 +1,222 @@
-import React from 'react'
+"use client";
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { FaLinkedin, FaMapMarkerAlt, FaBriefcase } from "react-icons/fa";
+import { HiSparkles } from "react-icons/hi2";
+import { MdSchool } from "react-icons/md";
+
+const FadeUp = ({ children, delay = 0, className = "" }) => (
+  <motion.div
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-60px" }}
+    transition={{ duration: 0.65, ease: "easeOut", delay }}
+    className={className}
+  >
+    {children}
+  </motion.div>
+);
 
 const about = () => {
   return (
     <>
-      <section className="min-h-screen text-gray-200 py-10 md:py-20 px-5 md:px-20 flex flex-col md:flex-row items-start gap-10">
+      <section className="min-h-screen text-gray-200 pt-28 pb-20 px-6 md:px-12 max-w-5xl mx-auto">
 
-        {/* Left Text Section */}
-        <div className="md:w-full space-y-6">
-          <h1 className="text-5xl font-bold text-white mb-4">About Me</h1>
-
-          <p className=" relative text-lg leading-relaxed text-gray-400">
-            Hey there 👋! I’m <span className="font-semibold">Zain Arshad</span>, a passionate and dedicated{" "}
-            <b>Computer Science student</b> currently pursuing my <b>Bachelor’s in Computer Science (BSCS)</b> at{" "}
-            <b>Government College University, Lahore (GCU)</b>. I’m in my <b>6th semester</b>, and each day at GCU brings
-            <img
-              src="/gcu.jpg"          // your GCU image in public folder
-              alt="GCU"
-              className="float-right w-48 h-48 md:w-64 md:h-64 ml-1 mt-1 rounded-lg object-cover"
-            />
-            me closer to mastering the art of technology, problem-solving, and creative thinking.
+        {/* Header */}
+        <FadeUp className="mb-12">
+          <div className="section-label mb-4 w-fit">
+            <HiSparkles className="w-3.5 h-3.5" />
+            Who I Am
+          </div>
+          <h1 className="text-5xl md:text-6xl font-black text-white mb-4">
+            About <span className="gradient-text">Me</span>
+          </h1>
+          <p className="text-gray-400 text-lg max-w-xl">
+            Full Stack Developer from Lahore, Pakistan — building enterprise-grade digital experiences.
           </p>
+        </FadeUp>
 
-          <p className='text-gray-400'>
-            My fascination with computers started at a young age — the moment I realized how a simple piece of code could
-            create something useful, interactive, and impactful. Since then, I’ve been continuously exploring,
-            experimenting, and evolving as a developer.
-          </p>
+        {/* Quick facts */}
+        <FadeUp delay={0.1} className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-14">
+          {[
+            { icon: <FaMapMarkerAlt className="w-4 h-4 text-purple-400" />, label: "Location", value: "Lahore, Pakistan" },
+            { icon: <FaBriefcase className="w-4 h-4 text-indigo-400" />, label: "Current Role", value: "Full Stack Dev @ 7 Kings Code" },
+            { icon: <MdSchool className="w-4 h-4 text-blue-400" />, label: "Education", value: "BSCS — GCU Lahore" },
+          ].map(({ icon, label, value }) => (
+            <div key={label} className="glass rounded-2xl p-4 border border-white/[0.06] flex items-center gap-3">
+              <div className="p-2 rounded-xl bg-white/5">{icon}</div>
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wide">{label}</p>
+                <p className="text-sm text-white font-medium">{value}</p>
+              </div>
+            </div>
+          ))}
+        </FadeUp>
 
-          <h2 className="text-2xl  font-semibold mt-10">My Journey in Tech</h2>
-          <p className='text-gray-400'>
-            Throughout my academic journey, I’ve had the opportunity to dive into various domains of computer science —
-            from the fundamentals of programming to complex system design and data management. Over time, I discovered a
-            deep passion for <b>web development</b> and <b>software quality assurance</b>.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+          {/* Main text */}
+          <div className="md:col-span-3 space-y-8">
+            <FadeUp delay={0.15}>
+              <div className="glass rounded-2xl p-6 border border-white/[0.06]">
+                <h2 className="text-xl font-bold text-white mb-3">Hey there 👋</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  I&apos;m <span className="text-white font-semibold">Zain Arshad</span>, a passionate Full Stack Developer
+                  currently working at{" "}
+                  <Link
+                    href="https://www.linkedin.com/company/7-kings-code"
+                    target="_blank"
+                    className="text-purple-400 hover:text-purple-300 font-semibold inline-flex items-center gap-1 transition-colors"
+                  >
+                    7 Kings Code <FaLinkedin className="w-3.5 h-3.5" />
+                  </Link>{" "}
+                  — a US-based software company. I specialize in React, Next.js, .NET, and have 6+ months of
+                  hands-on experience with <span className="text-indigo-400 font-semibold">Sitecore XM Cloud</span> — working as both a frontend developer and content editor.
+                </p>
+              </div>
+            </FadeUp>
 
-          <p className='text-gray-400'>
-            I started with the basics — <b>HTML, CSS, and JavaScript</b>, learning how to create visually appealing
-            websites. Soon, I moved toward advanced technologies like <b>React, Next.js, Node.js</b>, and{" "}
-            <b>MongoDB</b> to bring interactivity, scalability, and performance to my projects.
-          </p>
+            <FadeUp delay={0.2}>
+              <h2 className="text-2xl font-bold text-white mb-3">My Journey in Tech</h2>
+              <p className="text-gray-400 leading-relaxed mb-4">
+                My passion for tech started young — the moment I realized a few lines of code could create
+                something useful and impactful. Since then, I&apos;ve never stopped exploring. I started with
+                HTML, CSS, and JavaScript, progressed through React and Next.js, and now I work on enterprise
+                headless CMS solutions with <strong className="text-white">Sitecore XM Cloud</strong>.
+              </p>
+              <p className="text-gray-400 leading-relaxed">
+                Before joining 7 Kings Code, I worked at the <strong className="text-white">IT Department of Government College University (DIT GCU)</strong>,
+                where I helped develop and maintain campus-wide systems including LMS and Campus Management
+                Software using Node.js, Express, and React.
+              </p>
+            </FadeUp>
 
-          <p className='text-gray-400'>
-            But I didn’t stop at writing code. I wanted to ensure that what I build actually works the way it’s supposed
-            to. That’s where I developed a strong interest in <b>Software Quality Assurance (SQA)</b> — learning how to
-            test software, find bugs, improve performance, and ensure seamless user experiences.
-          </p>
+            <FadeUp delay={0.25}>
+              <h2 className="text-2xl font-bold text-white mb-3">Sitecore XM Cloud Experience</h2>
+              <div className="glass rounded-2xl p-5 border border-indigo-800/30">
+                <div className="flex items-center gap-3 mb-4">
+                  <img src="/sitecore_logo.jpg" alt="Sitecore" width={36} className="rounded-lg" />
+                  <div>
+                    <p className="text-white font-semibold text-sm">Sitecore XM Cloud</p>
+                    <Link
+                      href="https://www.linkedin.com/company/sitecore/"
+                      target="_blank"
+                      className="text-indigo-400 text-xs hover:text-indigo-300 flex items-center gap-1 transition-colors"
+                    >
+                      Follow on LinkedIn <FaLinkedin className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </div>
+                <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                  For the past 6 months, I&apos;ve been deeply immersed in Sitecore XM Cloud — building and
+                  integrating frontend components using the JSS SDK, working with GraphQL APIs, and managing
+                  content through the Sitecore CMS editor interface.
+                </p>
+                <ul className="space-y-2 text-sm text-gray-400">
+                  {[
+                    "Frontend component development with JSS SDK & Next.js",
+                    "Content management and publishing in Sitecore CMS",
+                    "GraphQL API integration for headless content delivery",
+                    "SSG/SSR/ISR rendering strategies for performance",
+                    "Collaboration with enterprise marketing & development teams",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeUp>
 
-          <h2 className="text-2xl  font-semibold mt-10">What I Love Doing</h2>
-          <ul className="list-disc list-inside space-y-2 text-gray-400">
-            <li>💻 Full Stack Web Development with React, Next.js, Node.js, and MongoDB</li>
-            <li>🧠 Software Quality Assurance — writing, testing, and improving software quality</li>
-            <li>🛠️ IT Support & Troubleshooting — solving technical issues and helping users</li>
-            <li>🎨 UI/UX Design — crafting simple, elegant, and user-friendly interfaces</li>
-          </ul>
+            <FadeUp delay={0.3}>
+              <h2 className="text-2xl font-bold text-white mb-3">What I Love Doing</h2>
+              <ul className="space-y-2 text-gray-400">
+                {[
+                  "💻 Full Stack Web Development — React, Next.js, Node.js, MongoDB, .NET",
+                  "🧩 Enterprise CMS — Sitecore XM Cloud frontend & content management",
+                  "🧠 Software Quality Assurance — testing, validation, performance",
+                  "🎨 UI/UX Design — crafting premium, user-friendly interfaces",
+                  "☁️ Cloud Computing — Azure, AWS fundamentals, scalable architecture",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2 text-sm">
+                    <span className="leading-relaxed">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </FadeUp>
 
-          <p className='text-gray-400'>
-            I love writing <b>clean, maintainable, and efficient code</b>. Whether I’m debugging a backend issue or
-            polishing a front-end component, I make every detail matter.
-          </p>
+            <FadeUp delay={0.35}>
+              <h2 className="text-2xl font-bold text-white mb-3">My Vision</h2>
+              <p className="text-gray-400 leading-relaxed">
+                My goal is to grow into a <strong className="text-white">versatile Full Stack Developer</strong> with
+                deep expertise in modern headless CMS platforms, cloud infrastructure, and software quality. I want
+                to build software that&apos;s not just functional, but reliable, accessible, and impactful.
+              </p>
+              <blockquote className="mt-6 border-l-2 border-purple-700 pl-4 italic text-gray-400">
+                &quot;Technology is not just about logic — it&apos;s about creativity, precision, and impact. Every project
+                I build is a reflection of my passion for learning and contributing through code.&quot;
+                <footer className="mt-2 text-sm text-purple-400 not-italic font-semibold">— Zain Arshad</footer>
+              </blockquote>
+            </FadeUp>
+          </div>
 
-          <h2 className="text-2xl  font-semibold mt-10">My Experience and Projects</h2>
-          <p className='text-gray-400'>
-            During my studies at GCU, I’ve worked on a variety of projects that strengthened my technical and
-            collaborative skills. Some highlights include:
-          </p>
+          {/* Sidebar */}
+          <div className="md:col-span-2 space-y-6">
+            {/* Photo */}
+            <FadeUp delay={0.2}>
+              <div className="relative rounded-2xl overflow-hidden aspect-[3/4] ring-2 ring-white/10">
+                <img
+                  src="/zain.jpg"
+                  alt="Zain Arshad"
+                  className="w-full h-full object-cover"
+                  style={{
+                    objectPosition: "center 55%",
+                    transform: "scale(1.1)",
+                    transformOrigin: "center 52%"
+                  }}
+                />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-[#05050a] via-transparent to-transparent" />
+              </div>
+            </FadeUp>
 
-          <ul className="list-disc list-inside space-y-2 text-gray-400">
-            <li>Creating interactive web applications using React and Next.js</li>
-            <li>Developing APIs and backend systems with Node.js and Express</li>
-            <li>Designing database architectures using MongoDB</li>
-            <li>Implementing testing, data validation, and automation for better reliability</li>
-            <li>Building password managers, management systems, and portfolio websites</li>
-          </ul>
+            {/* GCU card */}
+            <FadeUp delay={0.3}>
+              <div className="glass rounded-2xl p-5 border border-white/[0.06]">
+                <div className="flex items-center gap-3 mb-3">
+                  <img src="/gcu.jpg" alt="GCU" width={40} className="rounded-xl object-cover" />
+                  <div>
+                    <p className="text-white font-bold text-sm">Government College University</p>
+                    <p className="text-gray-500 text-xs">BSCS — Lahore, Pakistan</p>
+                  </div>
+                </div>
+                <p className="text-gray-400 text-xs leading-relaxed">
+                  GCU has been a life-changing experience — a culture of excellence, creativity, and discipline that shaped me into a determined developer and problem-solver.
+                </p>
+              </div>
+            </FadeUp>
 
-          <p className='text-gray-400'>
-            Each project taught me something new — not only about coding but also about teamwork, time management, and
-            problem-solving.
-          </p>
-
-          <h2 className="text-2xl text-blue-400 font-semibold mt-10">My Passion for Cloud Computing, SQA & IT Support</h2>
-
-          <p>
-            Over time, I’ve developed a strong interest in <b>cloud computing</b>—especially how modern applications scale, deploy,
-            and operate reliably on platforms like AWS, Azure, and Google Cloud. I enjoy exploring how cloud services handle
-            networking, storage, compute power, and automation. The idea of building systems that are always available, secure,
-            and efficient truly inspires me. Cloud technology is shaping the future, and I want to be part of it.
-          </p>
-
-          <p>
-            Along with cloud, my passion for <b>Software Quality Assurance (SQA)</b> keeps growing day by day. For me, SQA is not
-            just about finding bugs; it’s about thinking critically, understanding user needs, and ensuring that every feature
-            behaves exactly the way it should. I enjoy working with test cases, analyzing system behavior, and improving the
-            overall quality of applications. Quality isn’t a phase—it’s a mindset, and I follow that mindset in every project.
-          </p>
-
-          <p>
-            Lastly, I have a natural talent for <b>IT support</b>. I genuinely enjoy solving system issues, helping others set up
-            their environments, and making computers run smoother. It’s satisfying when a small fix saves someone hours of
-            confusion or frustration. Working in IT support teaches me patience, analytical thinking, and a strong understanding
-            of how computers and networks function—skills that perfectly complement both cloud computing and SQA.
-          </p>
-
-
-          <h2 className="text-2xl  font-semibold mt-10">Beyond the Code</h2>
-          <p className='text-gray-400'>
-            When I’m not coding or debugging, I’m usually exploring something new — reading about emerging technologies,
-            watching development tutorials, or experimenting with new tools.
-          </p>
-
-          <ul className="list-disc list-inside space-y-2 text-gray-400">
-            <li>Exploring TypeScript for better scalability</li>
-            <li>Learning API integrations and backend security</li>
-            <li>Experimenting with automation testing tools like Selenium and Postman</li>
-            <li>Diving into AI and cloud technologies</li>
-          </ul>
-
-          <p className='text-gray-400'>
-            I believe in <b>continuous learning and collaboration</b> — sharing knowledge, mentoring peers, and growing
-            together.
-          </p>
-
-          <h2 className="text-2xl font-semibold mt-10">My University – GCU Lahore</h2>
-          <p className='text-gray-400'>
-            Studying at <b>Government College University, Lahore</b> has been a life-changing experience. The university’s
-            culture of excellence, creativity, and discipline has shaped me into a confident and determined individual.
-          </p>
-
-          <p className='text-gray-400'>
-            The inspiring campus, professors’ mentorship, and innovative learning environment constantly encourage me to
-            dream bigger and push my limits. GCU is more than a place of study — it’s where I found my purpose and passion
-            for computing.
-          </p>
-
-          <h2 className="text-2xl  font-semibold mt-10">My Vision</h2>
-          <p className='text-gray-400'>
-            My ultimate goal is to grow into a <b>versatile Full Stack Developer</b> with strong foundations in{" "}
-            <b>Software Quality Assurance</b> and <b>IT Infrastructure</b>. I want to build software that’s not just
-            functional, but also reliable, accessible, and impactful.
-          </p>
-
-          <p className='text-gray-400'>
-            In the long run, I aspire to work on projects that make real-world impact — products that help people,
-            simplify their work, and make technology feel effortless.
-          </p>
-
-          <p className='text-gray-400'>
-            To me, success is not just about coding the perfect algorithm — it’s about understanding people, solving
-            problems, and creating something that lasts.
-          </p>
-
-          <p className="italic font-medium mt-8 text-gray-400">
-            “Technology is not just about logic — it’s about creativity, precision, and impact. Every project I build is a
-            reflection of my passion for learning, improving, and contributing to the world through code.”
-          </p>
-
-          <p className="font-semibold text-lg mt-4">
-            — Zain Arshad, Developer | Learner | Dreamer
-          </p>
+            {/* Beyond the Code */}
+            <FadeUp delay={0.4}>
+              <div className="glass rounded-2xl p-5 border border-white/[0.06]">
+                <h3 className="text-white font-bold mb-3 text-sm">Beyond the Code</h3>
+                <ul className="space-y-2 text-xs text-gray-400">
+                  {[
+                    "📚 Exploring TypeScript & advanced architecture patterns",
+                    "🤖 Diving into AI/ML integrations",
+                    "🧪 Automation testing with Selenium & Postman",
+                    "☁️ Learning cloud infrastructure (Azure)",
+                  ].map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </FadeUp>
+          </div>
         </div>
-
-        {/* Right Image Section */}
-        {/* <div className="md:w-1/3 flex justify-center mt-10 md:mt-0">
-        <img
-          src="/gcu.jpg" // <-- Place your GCU picture in /public folder
-          alt="Government College University Lahore"
-          width={420}
-          height={420}
-          className="rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-500"
-        />
-      </div> */}
       </section>
-
     </>
-  )
-}
+  );
+};
 
-export default about
+export default about;

@@ -18,25 +18,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "zainarshad.dev",
-  description: "This is my portfolio website. Here you can find my projects and my learning experience.",
+  title: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
+  description:
+    "Portfolio of Zain Arshad — Full Stack Developer at 7 Kings Code, specializing in React, Next.js, .NET, MERN Stack, and Sitecore XM Cloud. Based in Lahore, Pakistan.",
+  keywords: [
+    "Zain Arshad",
+    "Full Stack Developer",
+    "Sitecore XM Cloud",
+    "React Developer",
+    "Next.js",
+    "MERN Stack",
+    "7 Kings Code",
+    "Portfolio",
+    "Lahore",
+    "Pakistan",
+  ],
+  authors: [{ name: "Zain Arshad", url: "https://www.linkedin.com/in/zain-arshad-76155a322/" }],
+  openGraph: {
+    title: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
+    description:
+      "Full Stack Developer at 7 Kings Code with 6+ months of hands-on Sitecore XM Cloud experience. Explore projects, skills, and work history.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children
 }: Readonly<{
   children: React.ReactNode;
-  
 }>) {
   return (
     <html lang="en">
       <body
-        className="min-h-screen [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#05050a]`}
       >
-      <div className=""></div>
         <Navbar />
         {children}
-        <ToastContainer/>
+        <ToastContainer />
         <Footer />
       </body>
     </html>
