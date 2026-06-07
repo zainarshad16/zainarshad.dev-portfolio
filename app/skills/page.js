@@ -39,11 +39,7 @@ const SkillCard = ({ name, level, pct, animClass, color = "#7c3aed" }) => (
   </div>
 );
 
-export const metadata = {
-  title: "Skills - Zainarshad Portfolio",
-  description: "Explore Zain Arshad’s technical skills in web development, cloud computing, SQA, IT support, and full-stack technologies.",
-  icons: { icon: "/favicon.ico" }
-};
+
 
 const skills = () => {
   return (
