@@ -139,19 +139,6 @@ const Navbar = () => {
                           ? "text-purple-400 bg-purple-900/20"
                           : "text-gray-300 hover:text-white hover:bg-white/5"
                         }`}
-=======
-                <div onClick={() => setIsOpen(!isOpen)} className="hamburger sm:hidden cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="34" height="34" color="#909090" fill="none">
-                        <path d="M4 5L16 5" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
-                        <path d="M4 12L20 12" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
-                        <path d="M4 19L12 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
-                    </svg>
-                    <motion.div
-                        initial={{ x: "100%" }}
-                        animate={{ x: isOpen ? 0 : "100%" }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="fixed top-0 right-0 w-screen h-full p-6 "
->>>>>>> 967aa2d08c67d661d7fb6fbecd74044ea67f681a
                     >
                       {label}
                     </Link>
