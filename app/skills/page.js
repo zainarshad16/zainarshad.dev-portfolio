@@ -39,6 +39,12 @@ const SkillCard = ({ name, level, pct, animClass, color = "#7c3aed" }) => (
   </div>
 );
 
+export const metadata = {
+  title: "Skills - Zainarshad Portfolio",
+  description: "Explore Zain Arshad’s technical skills in web development, cloud computing, SQA, IT support, and full-stack technologies.",
+  icons: { icon: "/favicon.ico" }
+};
+
 const skills = () => {
   return (
     <div className="min-h-screen pt-28 pb-20 px-6 max-w-5xl mx-auto">
@@ -137,4 +143,137 @@ const skills = () => {
   );
 };
 
+<<<<<<< HEAD
 export default skills;
+=======
+      <div className="cards text-white grid grid-cols-1 md:grid-cols-2 gap-2 mx-5">
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">MERN</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line1 h-1.5 bg-blue-500 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Advance</span>
+          </div>
+        </div>
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">REACT</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line1 h-1.5 bg-blue-500 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Advanced</span>
+          </div>
+        </div>
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">DSA</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line h-1.5 bg-blue-500 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Intermediate</span>
+          </div>
+        </div>
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">OOP</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line3 h-1.5 bg-blue-500 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Expert</span>
+          </div>
+        </div>
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">My-SQL</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line h-1.5 bg-blue-500 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Intermediate</span>
+          </div>
+        </div>
+        
+      </div>
+
+      <div className="logo flex items-center my-10 mx-5 gap-4 text-white">
+        <FaBoxesStacked className="w-8 h-8 text-white" />
+        <div className='flex flex-col  gap-1'>
+          <span className='font-bold text-2xl'>Programs & Tools</span>
+          <span className='text-gray-400'>Development & Productivity Tools</span>
+        </div>
+      </div>
+
+      <div className="cards text-white grid grid-cols-1 md:grid-cols-2 gap-2 mx-5">
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">Git</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line3 h-1.5 bg-yellow-600 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Advanced</span>
+          </div>
+        </div>
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">Visual Studio Code</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line3 h-1.5 bg-yellow-600 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Advanced</span>
+          </div>
+        </div>
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">Postman</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line3 h-1.5 bg-yellow-600 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Advanced</span>
+          </div>
+        </div>
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">Adobe Photoshop</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line h-1.5 bg-yellow-600 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Intermediate</span>
+          </div>
+        </div>
+        <div className="card p-3 bg-gray-800 rounded-lg">
+          <div className="skill my-2 font-bold">Adobe Lightroom</div>
+          <div className="level h-1 bg-gray-700 rounded-b-lg overflow-hidden">
+            <div className="blue-line h-1.5 bg-yellow-600 w-0"></div>
+          </div>
+
+          <div className="bottom flex justify-between text-gray-400">
+            <span className="text-sm">Proficiency</span>
+            <span className="text-sm">Intermediate</span>
+          </div>
+        </div>
+        
+      </div>
+    </>
+  )
+}
+
+export default skills
+>>>>>>> 967aa2d08c67d661d7fb6fbecd74044ea67f681a

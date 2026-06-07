@@ -18,6 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
   description:
     "Portfolio of Zain Arshad — Full Stack Developer at 7 Kings Code, specializing in React, Next.js, .NET, MERN Stack, and Sitecore XM Cloud. Based in Lahore, Pakistan.",
@@ -40,6 +41,11 @@ export const metadata: Metadata = {
       "Full Stack Developer at 7 Kings Code with 6+ months of hands-on Sitecore XM Cloud experience. Explore projects, skills, and work history.",
     type: "website",
   },
+=======
+  title: "zainarshad.dev",
+  description: "Welcome to the personal portfolio of Zain Arshad, a passionate Full-Stack Developer and IT enthusiast. Explore my journey in BSCS at GCU, my love for cloud computing, coding, SQA, and IT support, and see how I bring creativity and precision to every project I build.",
+  icons: { icon: "/favicon.ico" }
+>>>>>>> 967aa2d08c67d661d7fb6fbecd74044ea67f681a
 };
 
 export default function RootLayout({
