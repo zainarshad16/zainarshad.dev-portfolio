@@ -18,7 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
+  metadataBase: new URL("https://zainarshad.dev"),
+  title: {
+    default: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
+    template: "%s | Zain Arshad"
+  },
   description:
     "Portfolio of Zain Arshad — Full Stack Developer at 7 Kings Code, specializing in React, Next.js, .NET, MERN Stack, and Sitecore XM Cloud. Based in Lahore, Pakistan.",
   keywords: [
@@ -32,13 +36,49 @@ export const metadata: Metadata = {
     "Portfolio",
     "Lahore",
     "Pakistan",
+    "Web Developer Lahore",
+    "Sitecore Developer Pakistan"
   ],
   authors: [{ name: "Zain Arshad", url: "https://www.linkedin.com/in/zain-arshad-76155a322/" }],
+  creator: "Zain Arshad",
   openGraph: {
     title: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
     description:
       "Full Stack Developer at 7 Kings Code with 6+ months of hands-on Sitecore XM Cloud experience. Explore projects, skills, and work history.",
+    url: "https://zainarshad.dev",
+    siteName: "Zain Arshad Portfolio",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
+    description:
+      "Full Stack Developer at 7 Kings Code with 6+ months of hands-on Sitecore XM Cloud experience. Explore projects, skills, and work history.",
+    images: ["/og-image.png"],
+    creator: "@zainarshad",
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
