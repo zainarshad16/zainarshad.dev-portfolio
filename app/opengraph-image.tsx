@@ -65,140 +65,131 @@ export default async function Image() {
           }}
         />
 
-        {/* The Glassmorphic Card */}
+        {/* The Glassmorphic Card - CENTERED LAYOUT FOR WHATSAPP CROP */}
         <div
           style={{
             display: 'flex',
-            flexDirection: 'row',
+            flexDirection: 'column',
             alignItems: 'center',
-            justifyContent: 'flex-start',
-            width: '1040px',
-            height: '480px',
+            justifyContent: 'center',
+            width: '900px',
+            height: '520px',
             background: 'rgba(255, 255, 255, 0.03)',
             border: '1px solid rgba(124, 58, 237, 0.2)',
             borderRadius: '32px',
-            padding: '60px',
+            padding: '40px',
             boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
+            textAlign: 'center',
           }}
         >
-          {/* Left Side: Content */}
-          <div style={{ display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'center', height: '100%' }}>
-            
-            {/* Profile Picture */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '90px',
-                height: '90px',
-                borderRadius: '50%',
-                marginBottom: '32px',
-                boxShadow: '0 8px 16px rgba(124, 58, 237, 0.25)',
-                border: '2px solid #7c3aed',
-                overflow: 'hidden',
-                position: 'relative',
-              }}
-            >
-              <img 
-                src={`${baseUrl}/zain.jpg`}
-                style={{ 
-                  position: 'absolute',
-                  top: '-45px',
-                  left: '-45px',
-                  width: '180px', 
-                  height: '180px', 
-                  objectFit: 'cover',
-                }}
-              />
-            </div>
-
-            <h1
-              style={{
-                fontSize: '64px',
-                fontWeight: 800,
-                color: '#ffffff',
-                margin: '0 0 16px 0',
-                lineHeight: 1.1,
-                letterSpacing: '-0.02em',
-              }}
-            >
-              Zain Arshad
-            </h1>
-            
-            <h2
-              style={{
-                fontSize: '28px',
-                fontWeight: 500,
-                color: '#94a3b8',
-                margin: '0 0 40px 0',
-                letterSpacing: '0.01em',
-              }}
-            >
-              <span style={{ color: '#a78bfa', marginRight: '10px' }}>&lt;/&gt;</span>
-              Full Stack & Sitecore XM Cloud Developer
-            </h2>
-            
-            {/* Website pill */}
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                marginTop: 'auto',
-              }}
-            >
-              <div
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  padding: '12px 24px',
-                  background: 'rgba(124, 58, 237, 0.1)',
-                  borderRadius: '100px',
-                  border: '1px solid rgba(124, 58, 237, 0.3)',
-                }}
-              >
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#a78bfa"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  style={{ marginRight: '12px' }}
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="2" y1="12" x2="22" y2="12" />
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-                <span
-                  style={{
-                    fontSize: '20px',
-                    color: '#c4b5fd',
-                    fontWeight: 500,
-                  }}
-                >
-                  zainarshad-portfolio.vercel.app
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Side: Tech Stack Logos */}
+          {/* Profile Picture */}
           <div
             style={{
               display: 'flex',
-              flexWrap: 'wrap',
-              width: '240px',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: '110px',
+              height: '110px',
+              borderRadius: '50%',
+              marginBottom: '24px',
+              boxShadow: '0 8px 16px rgba(124, 58, 237, 0.25)',
+              border: '2px solid #7c3aed',
+              overflow: 'hidden',
+              position: 'relative',
+            }}
+          >
+            <img 
+              src={`${baseUrl}/zain.jpg`}
+              style={{ 
+                position: 'absolute',
+                top: '-50px',
+                left: '-55px',
+                width: '220px', 
+                height: '220px', 
+                objectFit: 'cover',
+              }}
+            />
+          </div>
+
+          <h1
+            style={{
+              fontSize: '64px',
+              fontWeight: 800,
+              color: '#ffffff',
+              margin: '0 0 12px 0',
+              lineHeight: 1.1,
+              letterSpacing: '-0.02em',
+            }}
+          >
+            Zain Arshad
+          </h1>
+          
+          <h2
+            style={{
+              fontSize: '26px',
+              fontWeight: 500,
+              color: '#94a3b8',
+              margin: '0 0 24px 0',
+              letterSpacing: '0.01em',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <span style={{ color: '#a78bfa', marginRight: '10px' }}>&lt;/&gt;</span>
+            Full Stack & Sitecore XM Cloud Developer
+          </h2>
+          
+          {/* Website pill */}
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              padding: '12px 24px',
+              background: 'rgba(124, 58, 237, 0.1)',
+              borderRadius: '100px',
+              border: '1px solid rgba(124, 58, 237, 0.3)',
+              marginBottom: '32px',
+            }}
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#a78bfa"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{ marginRight: '12px' }}
+            >
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            <span
+              style={{
+                fontSize: '20px',
+                color: '#c4b5fd',
+                fontWeight: 500,
+              }}
+            >
+              zainarshad-portfolio.vercel.app
+            </span>
+          </div>
+
+          {/* Bottom: Tech Stack Logos Horizontal */}
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
               gap: '24px',
               justifyContent: 'center',
               alignItems: 'center',
             }}
           >
             {/* React */}
-            <div style={{ width: '96px', height: '96px', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}>
-              <svg viewBox="-11.5 -10.23174 23 20.46348" width="56" height="56">
+            <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}>
+              <svg viewBox="-11.5 -10.23174 23 20.46348" width="48" height="48">
                 <circle cx="0" cy="0" r="2.05" fill="#61dafb"/>
                 <g stroke="#61dafb" strokeWidth="1" fill="none">
                   <ellipse rx="11" ry="4.2"/>
@@ -209,22 +200,22 @@ export default async function Image() {
             </div>
 
             {/* Next.js (Official Logo from public folder) */}
-            <div style={{ width: '96px', height: '96px', borderRadius: '24px', background: 'white', border: '1px solid rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}>
-               <img src={`${baseUrl}/next.svg`} style={{ width: '80px', height: '80px', objectFit: 'contain' }} />
+            <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'white', border: '1px solid rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}>
+               <img src={`${baseUrl}/next.svg`} style={{ width: '64px', height: '64px', objectFit: 'contain' }} />
             </div>
 
             {/* TypeScript */}
-            <div style={{ width: '96px', height: '96px', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}>
-              <div style={{ background: '#3178C6', color: 'white', width: '56px', height: '56px', display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end', padding: '4px 8px', fontSize: '28px', fontWeight: 'bold', borderRadius: '6px' }}>
+            <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)' }}>
+              <div style={{ background: '#3178C6', color: 'white', width: '48px', height: '48px', display: 'flex', alignItems: 'flex-end', justifyContent: 'flex-end', padding: '4px 8px', fontSize: '24px', fontWeight: 'bold', borderRadius: '6px' }}>
                 TS
               </div>
             </div>
 
             {/* Sitecore */}
-            <div style={{ width: '96px', height: '96px', borderRadius: '24px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)', overflow: 'hidden' }}>
+            <div style={{ width: '80px', height: '80px', borderRadius: '20px', background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(124,58,237,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 10px 20px rgba(0,0,0,0.2)', overflow: 'hidden' }}>
                <img 
                  src={`${baseUrl}/sitecore_logo.jpg`}
-                 style={{ width: '56px', height: '56px', borderRadius: '6px', objectFit: 'cover' }}
+                 style={{ width: '48px', height: '48px', borderRadius: '6px', objectFit: 'cover' }}
                />
             </div>
           </div>
