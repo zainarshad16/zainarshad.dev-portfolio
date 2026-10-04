@@ -61,26 +61,26 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Nav */}
-        <ul className="hidden sm:flex items-center gap-1">
+        <ul className="hidden sm:flex items-center gap-1 relative" style={{ position: "relative" }}>
           {navLinks.map(({ href, label }) => {
             const isActive = pathname === href;
             return (
-              <li key={href}>
+              <li key={href} className="relative flex items-center justify-center" style={{ position: "relative" }}>
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-pill"
+                    className="absolute inset-0 rounded-full bg-purple-800/50 border border-purple-700/40"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
+                  />
+                )}
                 <Link
                   href={href}
-                  className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${isActive
+                  className={`relative z-10 block px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${isActive
                       ? "text-white"
                       : "text-gray-400 hover:text-white"
                     }`}
                 >
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-pill"
-                      className="absolute inset-0 rounded-full bg-purple-800/50 border border-purple-700/40"
-                      transition={{ type: "spring", bounce: 0.2, duration: 0.5 }}
-                    />
-                  )}
-                  <span className="relative z-10">{label}</span>
+                  {label}
                 </Link>
               </li>
             );

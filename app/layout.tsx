@@ -17,8 +17,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL 
+  ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` 
+  : process.env.VERCEL_URL 
+    ? `https://${process.env.VERCEL_URL}` 
+    : "http://localhost:3000";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zainarshad.dev"),
+  metadataBase: new URL(baseUrl),
   title: {
     default: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
     template: "%s | Zain Arshad"
@@ -45,16 +51,8 @@ export const metadata: Metadata = {
     title: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
     description:
       "Full Stack Developer at 7 Kings Code with 6+ months of hands-on Sitecore XM Cloud experience. Explore projects, skills, and work history.",
-    url: "https://zainarshad.dev",
+    url: "https://zainarshad-portfolio.vercel.app",
     siteName: "Zain Arshad Portfolio",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer Portfolio Preview",
-      },
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -63,7 +61,6 @@ export const metadata: Metadata = {
     title: "Zain Arshad | Full Stack & Sitecore XM Cloud Developer",
     description:
       "Full Stack Developer at 7 Kings Code with 6+ months of hands-on Sitecore XM Cloud experience. Explore projects, skills, and work history.",
-    images: ["/og-image.png"],
     creator: "@zainarshad",
   },
   icons: {
